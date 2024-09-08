@@ -28,11 +28,8 @@ public class Restuarant {
 
     @Override
     public String toString() {
-        return "Restuarant{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", menu=" + menu +
-                '}';
+        return "Restuarant id: " +  id +
+                ", name: " + name + "\n" ;
     }
 
     public void addFoodItem(FoodItem fooditem){

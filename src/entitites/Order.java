@@ -21,23 +21,18 @@ public class Order {
     public int getOrderId() {
         return orderId;
     }
-
     public Customer getCustomer() {
         return customer;
     }
-
     public Map<FoodItem, Integer> getItems() {
         return items;
     }
-
     public String getStatus() {
         return status;
     }
-
     public DeliveryPerson getDeliveryPerson() {
         return deliveryPerson;
     }
-
     public String getDeliveryAddress() {
         return deliveryAddress;
     }
@@ -45,11 +40,9 @@ public class Order {
     public void setStatus(String status) {
         this.status = status;
     }
-
     public void setDeliveryPerson(DeliveryPerson deliveryPerson) {
         this.deliveryPerson = deliveryPerson;
     }
-
     public void setDeliveryAddress(String deliveryAddress) {
         this.deliveryAddress = deliveryAddress;
     }
