@@ -26,10 +26,10 @@ public class FoodService {
         }
         System.out.println("RestuarantID Not Found");
     }
-    public void removeFoodItemFromRestaurant (int restuarantID,FoodItem foodItem){
+    public void removeFoodItemFromRestaurant (int restuarantID,int foodItemID){
         for(Restuarant r : restuarants){
             if( r.getId() == restuarantID){
-                r.removeFoodItem(restuarantID);
+                r.removeFoodItem(foodItemID);
             }
         }
         System.out.println("Restuarant ID Not Found");

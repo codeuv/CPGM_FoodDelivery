@@ -9,11 +9,11 @@ public class Cart {
         items = new HashMap<>();
     }
 
-    void addItem(FoodItem foodItem ,int quantity){
+    public void addItem(FoodItem foodItem ,int quantity){
         items.put(foodItem, items.getOrDefault(foodItem, 0) + quantity);
     }
 
-    void removeItem(FoodItem fooditem){
+    public void removeItem(FoodItem fooditem){
         if( items.containsKey(fooditem)){
             items.remove(fooditem);
         }
@@ -29,5 +29,20 @@ public class Cart {
         return "Cart{" +
                 "items=" + items +
                 '}';
+    }
+
+    public void viewCart(){
+        System.out.println("Cart");
+        double totalCost = 0d;
+        for (Map.Entry<FoodItem, Integer> entry : items.entrySet()) {
+            double cost = entry.getKey().getPrice() * entry.getValue();
+
+            System.out.println("Food Item: " + entry.getKey() + ","
+                    + " Quantity: " + entry.getValue()
+                    + " Cost"+cost);
+            totalCost += cost;
+        }
+        System.out.println("Total Cost: "+totalCost);
+
     }
 }
